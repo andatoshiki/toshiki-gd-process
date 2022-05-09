@@ -116,3 +116,107 @@ For 4/27, I mainly focused on the dashboard's second part, the version 1 of the 
 | ![](images/dashsidebar.excalidraw.png) | ![](images/dashsidebar.png) |
 
 I didn't finish the dropdown menu part, since I was called out for PCR.
+
+## 4/27
+
+For 4/27, I mainly target with layouting `<div>` blocks in `HTML`, onlike other webdevs whom starts off with javascript+live server direct site featuring and instant viewing with `SCSS` serving, I personally prefer the "dumber" way in which I manage one single page with different blocks and start to write `CSS` styling based off with the current tabs, I mainly targeted with a smooth admin panel, they way for reaching this is simply set the `offset-x: 0;` in css and style the div with some `border-radius` element in order to serve a metamorphism-styled oblong shape (newly learned Geometry vocab, simply rectangles with rounded corners as the depiction in the image below). After all these tedious basic setups, all my `<div>` blocks seems perfectly oblong shaped, but I instantly realized a problem, if I just simply did,
+
+```css
+div {
+  border-radius: 50px;
+  ...
+}
+```
+
+then `<divs>` on the entire page will be border rounded, what if I have another `<div>` wrapped inside another one? That's the really basic mistake I always make, which I usually aim at the final prodiction but not the details, the solution is just simple add a class in side the HTML file and specify the class's style in CSS, as follow,
+
+The HTML, I defined a class called `oblong` within the `<div>` which will make the HTML file "look up" the `oblong` class in CSS and serve its style directly to the `<div>` block, pretty much like a puzzle solving game, :)
+
+```html
+<div class="oblong"></div>
+```
+
+The CSS,
+
+```css
+.oblong {
+  border-radius: 50px;
+  /* yea this works */
+}
+```
+
+For the rest of the rest of the class I mainly optimized the smoothness on loading page.
+<p align="left">
+<img src="https://user-images.githubusercontent.com/101481353/167329754-f4bbe6d2-13f5-4a36-9465-b1f2c1c8cc26.png"></img>
+<- This is Oblong
+</p>
+
+## 4/29
+
+For 4/29 I mainly worked on the rest of the page since I have written the default CSS style, the default version of navbar is finished as shown in the image below,
+![image](https://user-images.githubusercontent.com/101481353/167330630-10daede8-b84c-4d07-b087-c0c4a2445bbf.png)
+And for the rest of the class, I worked on the second quarter part of the webpage, which is the personal profile&&multifunctional sidebar.
+![image](https://user-images.githubusercontent.com/101481353/167330689-924d7017-74c0-488c-bd0d-3cf904f20c05.png)
+
+## 5/3
+
+After returned from the short break, I almost forgot where I left off with my webpage but I still recalled the thing I did from last week (that
+s where I starts to feel nice on writing developmental journals as it helps you build your memory), during finishing up the rest of the page I accidentally clicked on "mobile view" option provided by chrome in development tools and it drived me crazy because I missed to do one important thing-responsiveness adjustment, but the code here is half way done, I didn't know how to proceed, what directly comes out of my mind is just to simply add the following line of HTML to my original code,
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+This helps on setting the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling. But I soon realized that different phones have different dimensions whereas a smaller phone might experience overflow of content out of their webpages, but phones with relatively greater dimensions will have better viewing ports hence the solution for this is to set `margin` style to either `auto` or `200px` for squeezing the page into center on mobile view, as a result, it didn't work. After a long tedious research, I finally got my solution on [@stackoverflow](https://stackoverflow.com/questions/32598727/why-does-margin-right-not-work-but-margin-left-margin-top-and-margin-bottom-do), the user asked a question simlilarly as I did then I instantly knew where the problem is.
+
+to use the `@media-query` element for a specific block, as described below,
+
+```css
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+```
+In addition to resize text and images, it is also common to use media queries in responsive web pages, With media queries you can define completely different styles for different browser sizes, then I looked up different phone's dimentsion and made a table below for easier access to development,
+
+
+| Phone                   | Height | Width | Depth | Weight | Screen |
+| ----------------------- | ------ | ----- | ----- | ------ | ------ |
+| HTC One X+              | 134.36 | 69.90 | 8.90  | 129    | 4.7    |
+| HTC One S               | 130.90 | 65.00 | 7.80  | 119    | 4.3    |
+| HTC DNA                 | 141.00 | 70.50 | 9.73  | 142    | 5.0    |
+| HTC Sensation 4g        | 126.10 | 65.40 | 11.30 | 148    | 4.3    |
+| LG Nexus 4              | 133.90 | 68.70 | 9.10  | 139    | 4.7    |
+| LG Optimus 4x HD        | 132.40 | 68.10 | 8.90  | 141    | 4.7    |
+| LG Optimus G            | 131.90 | 68.90 | 8.45  | 145    | 4.7    |
+| Sony Xperia T           | 129.40 | 67.30 | 9.35  | 139    | 4.55   |
+| Sony Xperia SL          | 128.00 | 64.00 | 10.6  | 144    | 4.3    |
+| Samsung Galaxy Note     | 147.00 | 83.00 | 9.65  | 178    | 5.3    |
+| Samsung Galaxy Note II  | 151.00 | 80.50 | 9.40  | 180    | 5.5    |
+| Samsung Galaxy S3       | 136.60 | 70.60 | 8.60  | 133    | 4.8    |
+| Samsung Galaxy Nexus    | 135.50 | 67.94 | 8.94  | 135    | 4.65   |
+| Moto Razr M             | 122.50 | 60.90 | 8.30  | 126    | 4.3    |
+| Moto Razr Maxx HD       | 131.90 | 67.90 | 9.30  | 157    | 4.7    |
+| Moto Razr i             | 122.50 | 60.90 | 8.30  | 127    | 4.3    |
+| Moto Droid Bionic       | 127.50 | 66.90 | 10.90 | 159    | 4.3    |
+| Asus Padfone 2          | 136.60 | 70.60 | 8.60  | 135    | 4.7    |
+| Lumia 920(windowsphone) | 130.30 | 70.80 | 10.70 | 185    | 4.5    |
+| iPhone 5 (iOS)          | 123.80 | 58.60 | 7.60  | 112    | 4.0    |
+| iPhone 4S (iOS)         | 115.20 | 58.60 | 9.30  | 137    | 3.5    |
+
+After this I started <kbd>ctrl</kbd>+<kbd>c</kbd>, <kbd>ctrl</kbd>+<kbd>v</kbd> dimension scales into CSS stylesheets for responsive adjustment.
+
+# 5/5
+The first version of my admin panel is out! :) released under domain: https://alex-admin.vercel.app/, hosted on vercel, secoundary domain provided by vercel (or I could use my own one but I didn't want to waste time on `CNAME` domain configuration). By far this webpage only provides a webfronted basic UI components+web interactions, not further backend support has been enabled, users have to manually integrade backend servers themselves, the admin panel serves the feature of, personal profile, navbar for quick access, weather reporting, newsletter recieve, real time data charts, twitter & facebook [oEmed](https://publish.twitter.com/oEmbed) for direct tweet viewing, multifunctional sidebar, file transmitting speed preview, calendar features and more... Still not completed.
+
+List of things I didn't achieve so far,
+
+- A little typo found by Mr. Luke, instead of May, I mistakenly type AMAY
+
+![image](https://user-images.githubusercontent.com/101481353/167333116-5c5f25b6-5058-475e-a6e3-8e2ca3fddb1a.png)
+
+- IOS responsiveness not fixed
+- Favicon not added
+- ...
