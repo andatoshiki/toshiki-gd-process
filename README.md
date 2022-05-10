@@ -220,3 +220,13 @@ List of things I didn't achieve so far,
 - IOS responsiveness not fixed
 - Favicon not added
 - ...
+
+## ACCESS FM
+- A-Aesthetics, the product (which refer to admin panel in the following text) is a carefully designed admin panel for public usages, the color of the product mainly followed MDUI design principles published by google, the color needs to be attractive for attention spot when a user comes to visit the site, I mainly picked #1f253d as my main background color (color palette generated from coolors) and it's affiliated colors from dark to light, green, red, yellow and blue for different features, the style mainly followed my design sketches, and a little touch of design principles from google designs.
+- C-Cost, this product cost absolutely **0** in any type of currency, the project itself is open source and the cost of the project to make is also zero. Figma provides a free solution for students which we can register under SLAS's email domain, also vercel is a free platform for hosting web apps, for domain, I picked vercel default witha a custom prefix `alex-admin` and the fallback domain `vercel.app` is provided by vercel platform, or I can choose my own domain to use but I didn't.
+- C-Customer: The costumer of the project could be at any ages, for those people who want to use the panel as a template for backend or for people who just started learning webdev. So far I didn't recieve any likes or dislikes for my project but from my course teacher, it might be viewed more in the future, but I cannot conclude by far.
+- E-Environment: The product will likely not to affect the enviroment, it is redesignable and redeployable. The project does not harm environment in any way, one affect might be increasing the burden of Vercel's server.
+- S-Size: The size of my project is responsive, which means it could either fit into a computer screen or a mobile screen for viewing experiences, (mostly 1920\*1080 for web screens), since the final product is an online web application yet responsive, it does not matter how user size different devices, the site itself will readjust viewport to fit viewer's demands.
+- S-Safety: This project is absolutely safe because it's open sourced and it is only a static webpage with pure HTML+CSS+JS with no external library implemented, it might hurt other users if they redesign and rewrote page for mallicious sites, but in most case scenarios, my project is safe.
+- F-Function: The projects mainly work with the following features,
+  - 
