@@ -234,3 +234,60 @@ List of things I didn't achieve so far,
 ## Design Brief
 
 I personally wanted to create this admin panel since I first started off self-learning webdev and luckily SLAS provides graphic design as a course option, which produces this opportunity for me in order to design and produce this admin panel on both UI and code side. Most of the admin panel on internet is not open sourced or you'll have to pay in order to reach their services, yet some of the open sourced projects do not have UI design that fits my demand, hence the project recieved its bith. 
+
+Below are my **REASEARCHES** in regard to my design progresses,
+
+- How typography can influence the behavior of my audience, and what font should I choose?
+  - According to [@silkcards](https://silkcards.com/blog/inspire/how-typography-can-influence-the-behavior-of-your-audience/), when it comes to reading, typefaces are one of the most important factors that affect how quickly readers reach the bottom of the page. The general view is that readers read about 28% of the words in a normal manuscript. They read only 20% of the material on a page on average.
+A typeface has four key components. These are the font size, line spacing, age of the reader, and font intensity. Small font sizes and poor contrast typefaces are the most common complaints from internet readers. Keep in mind that by the age of forty, the amount of light reaching your retina has dropped by half. (paraphrased) I condifently picked _Open Snas_ as my primary design font and web font to gain attraction from a viewer for the reason that Open Sans has an upright tension, open shapes, and a neutral, yet inviting look. It was designed for print, online, and mobile interfaces, and its letterforms have good readability.
+
+- How to correctly pick the color scheme and contract colors for my design?
+  - In regard to [@sitepoint](https://www.sitepoint.com/principles-of-design-colour/) that Monochromatic scheme with a blue base is always a good starter for deriving new colors based on palete's dark-light relationship, a monochromatic blue base has the following features,
+    - a particular color Shade 
+    - a darker version of a particular color Tint 
+    - a lighter version of a particular color
+    This provides good color base in a design, and it's also easier to choose its own contract colors for different design sections such as organce, red in order for people to gain attention on different parts, also applying hues and opacities on such a scheme will provide more possibilities with color comninations, this is the **main** reason why I chose this color scheme as my primary color theme, to conclude.
+    
+- What tools can I use t create [Masonry Layout](https://en.wikipedia.org/wiki/Masonry) in figma without using a plugin? 
+Below is just my **personal note** on tackling layout in figmas without references (technically a scratch pulled from my memory)
+
+  - **SHIFT + A** = add auto layout
+  - **SHIFT + ALT + A** = turn auto layout frame into a regular frame
+  - **CMD / CTRL + SHIFT + G** = remove auto layout
+  - **CMD / CTRL + D** = duplicate items in an auto layout
+-  Save time by copying the styling of any auto layout container by using **OPTION + CMD / CTRL + C** and paste with **OPTION + CMD / CTRL + V.**
+
+- Masonry Layout in CSS? (code side)
+  - Simply add the following CSS stylesheet
+
+```css
+.container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
+}
+```
+and add the `.container` class to your `<div>` wrapper.
+
+(reserach ends)
+
+As an admin panel it should include the basic features of most admin panels we can see on the markets, calendars, stopwatches, email and etc are the basics, but this time I wanted to add some more "stylistic" things to my own design, below is a full documentation of my admin panel design & usages in a table.
+
+| Screenshot                                                   | Feature Explained                                            |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![image-20220512045330573](C:\Users\andatoshiki\AppData\Roaming\Typora\typora-user-images\image-20220512045330573.png) | **Navigation bar**: Every single admin panel should have one navigation bar for easier access to their wanted resources speedily, which includes settings, accounts, messages and favorites. I took the idea from *Microsoft Azure AD*, they made it vertically, instead, I designed it traditionally for people who were already used to horizontal tab designs. (like me) |
+| ![image](https://user-images.githubusercontent.com/101481353/167946109-2bff5be5-8001-4522-8555-bc0ffc99eed7.png) | **Menu box**: The menu box also serves as a quick access feature for users to easily reach out to the resources they want, I made it on the top right corner for people to get ***even more faster access*** for reaching important features such as messages, events... Although users are able to customize pins themselves within settings. |
+| ![image](https://user-images.githubusercontent.com/101481353/167946569-c416c07f-2f5b-450d-a889-f101a566c78c.png) | **Profile box**: The profile box is the very basic of every admin panel when user logged into a service, most of the admin panels provides a simple avatar with a dropdown menu for quick access to resources when you hover your mouse on that specific tabs. But in my design I made it directly in the middle for users to view their own profile statistics with messages, profile visits and likes. Also I implemented a simple JavaScript trick below the display name, when user enters the site in morning the webpage will automatically greet user with good morning, when noon with a have a good lunch and so on, for more user friendly options. |
+| ![image](https://user-images.githubusercontent.com/101481353/167947080-2e3fd962-dfbf-465f-996d-43b36485bf98.png) | **Customized customer stats pie chart**: The pie chart could be customized to any type based on their own demands, in my demo I simply added a OS audience stats which can easily tells e how many percent of my user is own which type of OS, and which one is the most popular ones. This is unlike other admin panels because most of the admin panels requires you to crazily click into one link by another for getting data reports; in order to solve this is just to simply add a chart for user to view stats. |
+| ![image](https://user-images.githubusercontent.com/101481353/167947559-09bce076-f46c-4e91-a8ba-e66de729a1c2.png) | **Weather reports**: Weather report is a feature most of the admin panels don't have, I added to my own design because I want my users to have a painless working environment, make things more user friendly is my design aim and purpose. The weather report is not yet linked to any weather platform APIs, users can easily pick their own options and implement it themselkves. |
+| ![image](https://user-images.githubusercontent.com/101481353/167948035-f4265978-c58f-403d-85a2-c1156ca851ad.png) | **Twitter Oembed**: This is just a simple twitter card for users to read their own customer's twitter updates in order to locate and target their urgent needs or inconveniences. |
+| ![image](https://user-images.githubusercontent.com/101481353/167948234-f6b63e57-3dce-4d71-be58-86940e91af5a.png) | **Waitlist & Email registration**: This is a feature every admin panel should have, for profile viewers to get updates directly via email with just a one-click join button. |
+| ![image](https://user-images.githubusercontent.com/101481353/167948408-9b047998-33f2-4a19-afc2-a379491440d6.png) | **Growth chart**: The growth chart supports three or more viewing options from weekly to monthly and yearly. Which ensures users get a accurate growth updates on their own products in a "human-understandable" chart with only two number lines. |
+| ![image](https://user-images.githubusercontent.com/101481353/167948650-3f1c14bf-e80d-4322-8832-20f56a1c6239.png) | **Videos**: This is the part I like the most, when user are getting tedious at work, via this video embbeding feature they are allowed to add their own favorite videos/movies/TV shows to watch while working on the admin panel in order to prevent users from a boring work that will possibly results in a bad procrastination, it provides more amusement possibilities via video features. |
+| ![image](https://user-images.githubusercontent.com/101481353/167948961-da57d08f-9fcd-4b41-9547-9a6e5df66f10.png) | **Transferring speed**: This directly provides users a view of their own data transferring speed in only two progress bars. (To be honest I just wanted to fill out some empty spaces on design in order to wipe out imbalances). |
+| ![image](https://user-images.githubusercontent.com/101481353/167949221-fe94e254-9e89-4ddc-8db9-925a01732e40.png) | **Calendar**: Calendar should be a basic feature all admin panels should have, calendar on my admin panel design provides user a easy way to add their own current events or to-dos for alerting people with heavy forgetfulness (like me). It also allows users to switch between dates in order to viewing to-dos from different days for easier project track downs. |
+| ![image](https://user-images.githubusercontent.com/101481353/167949557-8554a882-1bb5-408e-ba77-92385c8339c8.png) | **Quick share buttons**: These are just simple quick share buttons with no special usages for users to quick showcase/share their projects easily to others. |
+
+
+
