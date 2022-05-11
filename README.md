@@ -228,5 +228,9 @@ List of things I didn't achieve so far,
 - E-Environment: The product will likely not to affect the enviroment, it is redesignable and redeployable. The project does not harm environment in any way, one affect might be increasing the burden of Vercel's server.
 - S-Size: The size of my project is responsive, which means it could either fit into a computer screen or a mobile screen for viewing experiences, (mostly 1920\*1080 for web screens), since the final product is an online web application yet responsive, it does not matter how user size different devices, the site itself will readjust viewport to fit viewer's demands.
 - S-Safety: This project is absolutely safe because it's open sourced and it is only a static webpage with pure HTML+CSS+JS with no external library implemented, it might hurt other users if they redesign and rewrote page for mallicious sites, but in most case scenarios, my project is safe.
-- F-Function: The projects mainly work with the following features,
-  - 
+- F-Function: The projects is a admin panel that mainly serves the feature of viewing data in the **painless way** in which no more complex panel structure should be found but easy block structures, this is the main idea of my design. It can be improved in a lot of ways, under my design every single block that contains a feature have a really easy code portion which users can implement new features easily.
+- M-Material: The materials used in this project is HTML+CSS+JS+PSD+FIGMA, these cannot be technically called "materials" but these things are really how I built up the pronect. The product is made using Figma IDE+Adobe Photoshop&Visual studio code. The project materials could be improved by using _Vue lang_ instead of HTML because the final presentaion on web will be smoother than traditional _HTML_.
+
+## Design Brief
+
+
