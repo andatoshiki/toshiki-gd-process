@@ -233,4 +233,4 @@ List of things I didn't achieve so far,
 
 ## Design Brief
 
-
+I personally wanted to create this admin panel since I first started off self-learning webdev and luckily SLAS provides graphic design as a course option, which produces this opportunity for me in order to design and produce this admin panel on both UI and code side. Most of the admin panel on internet is not open sourced or you'll have to pay in order to reach their services, yet some of the open sourced projects do not have UI design that fits my demand, hence the project recieved its bith. 
